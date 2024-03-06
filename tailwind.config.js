@@ -28,6 +28,10 @@ module.exports = {
       'rocker-sm': '10px',
       'tailwick-sm': '0.375rem'
     },
+    fontFamily: {
+      'rocker': ['Roboto', 'sans-serif'],
+      'tailwick': ['Public Sans', 'sans-serif']
+    },
     extend: {},
   },
   plugins: [],
