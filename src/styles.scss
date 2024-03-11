@@ -3,6 +3,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import './app/core/styles/reset';
+
 body {
     @apply font-tailwick;
 }

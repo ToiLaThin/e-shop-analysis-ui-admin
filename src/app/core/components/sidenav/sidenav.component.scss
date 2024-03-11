@@ -1,0 +1,11 @@
+.my-hover-display {
+    &:hover + .to-display{
+        display: block;
+    } 
+}
+
+.to-display {
+    &:hover { display: block; }
+    &:has(a:focus, a:active) { display: block; }
+    a:active { @apply text-[red]; }
+}
