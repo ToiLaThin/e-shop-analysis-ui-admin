@@ -10,6 +10,14 @@ body {
 }
 
 .container {
-    @apply mx-auto;
-    @apply w-[92%];
+    // @apply mx-auto;
+    // @apply w-[92%];
+}
+
+.clear-fix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
 }
