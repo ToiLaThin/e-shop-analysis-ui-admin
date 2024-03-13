@@ -1,1 +1,29 @@
+:host {
+    --cui-header-color: rgba(44,56, 74, 0.681);
+}
 
+h2.header-item {
+    @apply hidden lg:block;
+    color: var(--cui-header-color);
+    font-weight: 100;
+    font-size: 16px;
+}
+
+.toggle-btn {
+    //to center the ion icon
+    display: flex;
+    align-items: center;
+    color: var(--cui-header-color);
+}
+.icon-container {
+    @apply hidden text-xl mr-4 lg:block;
+    color: var(--cui-header-color);
+}
+.avatar-container {
+    width: 40px;
+    height: auto;
+    background-size: cover;
+    & img {
+        border-radius: 50%;
+    }
+}
