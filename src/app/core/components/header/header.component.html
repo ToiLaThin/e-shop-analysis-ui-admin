@@ -1,23 +1,31 @@
-<header class="container py-2">
+<header class="container py-2 border-b border-solid border-tailwick-gray-text">
     <div class="flex items-center justify-between p-2">
         <div class="flex items-center">
-            <button class="text-xl" 
+            <button class="text-xl toggle-btn" 
                     (click)="toggleSideNav()">
-                <i class="fas fa-bars"></i>
+                <ion-icon name="toggle-outline"></ion-icon>
             </button>
-            <h1 class="text-xl ml-4">E-Shop Analysis</h1>
+            <h2 class="header-item ml-4">Dashboard</h2>
+            <h2 class="header-item ml-4">Users</h2>
+            <h2 class="header-item ml-4">Settings</h2>
         </div>
 
-        <div class="flex items-center flex-start font-thin gap-1">
-            <div class="flex items-center rounded px-2 py-1">
-                <i class="fas fa-bell text-xl"></i>
-            </div>
-            <div class="flex items-center ml-4 rounded px-2 py-1">
-                <i class="fas fa-user text-xl"></i>
-            </div>
-            <div class="flex items-center ml-4 rounded px-2 py-1">
-                <i class="fas fa-search text-xl"></i>
-            </div>
+        <div class="flex items-center justify-start">
+           <div class="icon-container">
+                <ion-icon name="notifications-outline">
+                </ion-icon>
+           </div>
+           <div class="icon-container">
+                <ion-icon name="list-outline">
+                </ion-icon>
+           </div>
+           <div class="icon-container">
+                <ion-icon name="document-outline">
+                </ion-icon>
+           </div>
+           <div class="avatar-container">
+                <img src="../../../../assets/images/avatar.jpg" alt="">
+           </div>
         </div>
     </div>
 </header>
