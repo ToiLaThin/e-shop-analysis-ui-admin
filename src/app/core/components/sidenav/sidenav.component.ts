@@ -1,16 +1,24 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { SideBarLink } from "../../ui-models/sidebar-link";
+import { Observable } from "rxjs";
+import { SideBarCollapseService } from "../../services/sidebar-collapse.service";
 
 @Component({
     selector: "app-sidenav",
     templateUrl: './sidenav.component.html',
     styleUrls: ['./sidenav.component.scss']
 })
-export class SideNavComponent {
-    collapsed: boolean = false;
+export class SideNavComponent implements OnInit{
+    collapsed$!: Observable<boolean>;
+
+    constructor(private _sideBarCollapseService: SideBarCollapseService) {{}}
+
+    ngOnInit(): void {
+        this.collapsed$ = this._sideBarCollapseService.collapsed$;
+    }
 
     toggleCollapse() {
-        this.collapsed = !this.collapsed;
+        this._sideBarCollapseService.toggleCollapse();
         let headings = document.querySelectorAll('.navigation-body p');
         headings.forEach(h => h.classList.toggle('hidden'));
     }
