@@ -14,36 +14,21 @@
         }
         </div>
         <ul class="navigation-body flex flex-col justify-start items-start gap-6 mt-4 mb-4">
-            <li><a routerLink="">
-                <span class="icon"><ion-icon name="speedometer-outline"></ion-icon></span>
-                <span class="title">Dashboard</span>
-            </a></li>
+            @for (sLink of sideBarLinks; track $index) {
+                @if (sLink.haveHeading) {
+                    <p class="uppercase">{{sLink.headingTitle}}</p>
+                }
+                <li><a routerLink="">
+                    <span class="icon">
+                        <ion-icon name="{{sLink.iconName}}">
+                        </ion-icon>
+                    </span>
+                    <span class="title">
+                        {{sLink.urlTitle}}
+                    </span>
+                </a></li>
 
-            <p class="uppercase">Theme</p>
-            <li><a routerLink="">
-                <span class="icon"><ion-icon name="water-outline"></ion-icon></span>
-                <span class="title">Colors</span>
-            </a></li>
-            <li><a routerLink="">
-                <span class="icon"><ion-icon name="pencil-outline"></ion-icon></span>
-                <span class="title">Typography</span>
-            </a></li>
-
-            <p class="uppercase">Components</p>
-            <li><a routerLink="">
-                <span class="icon"><ion-icon name="extension-puzzle-outline"></ion-icon></span>
-                <span class="title">Base</span>
-            </a></li>
-            <p class="uppercase">Extras</p>
-            <li><a routerLink="">
-                <span class="icon"><ion-icon name="star-outline"></ion-icon></span>
-                <span class="title">Pages</span>
-            </a></li>
-            <p class="uppercase mt-5">Links</p>
-            <li><a routerLink="">
-                <span class="icon"><ion-icon name="document-text-outline"></ion-icon></span>
-                <span class="title">Docs</span>
-            </a></li>
+            }
             <li><a routerLink="">
                 <span class="icon"><ion-icon name="layers-outline"></ion-icon></span>
                 <span class="title">Try Core UI PRO</span>
