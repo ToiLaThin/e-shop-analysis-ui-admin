@@ -6,6 +6,8 @@ import { Component, Input } from "@angular/core";
 })
 export class SvgIcon {
     @Input() size: number = 16;
+    @Input() wSizeIsHSize: boolean = true;
+    @Input() hSize: number = 16; // if wSizeIsHSize == false, you must provide hSize
     @Input() iconName!: string;
     get iconUrl() {
         return `${window.location.href}#${this.iconName}`

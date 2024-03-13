@@ -6,5 +6,11 @@ import { Component } from "@angular/core";
     styleUrls: ['./sidenav.component.scss']
 })
 export class SideNavComponent {
+    collapsed: boolean = false;
 
+    toggleCollapse() {
+        this.collapsed = !this.collapsed;
+        let headings = document.querySelectorAll('.navigation-body p');
+        headings.forEach(h => h.classList.toggle('hidden'));
+    }
 }
