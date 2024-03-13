@@ -3,6 +3,7 @@ import { HeaderComponent } from "./components/header/header.component";
 import { SideNavComponent } from "./components/sidenav/sidenav.component";
 import { SvgDefinitionsComponent } from "./components/svg-definitions/svg-definitions.component";
 import { SvgIcon } from "./components/svg-icon/svg-icon.component";
+import { CommonModule } from "@angular/common";
 
 @NgModule({
     declarations: [
@@ -11,7 +12,9 @@ import { SvgIcon } from "./components/svg-icon/svg-icon.component";
         SvgDefinitionsComponent,
         SvgIcon
     ],
-    imports: [],
+    imports: [
+        CommonModule //to have asyn pipe in SideNavComponent
+    ],
     exports: [
         HeaderComponent,
         SideNavComponent,

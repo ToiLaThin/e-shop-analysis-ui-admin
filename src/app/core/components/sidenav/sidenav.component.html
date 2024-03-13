@@ -1,7 +1,6 @@
-<div class="container">
-    <nav class="navigation" [style.width.px]="collapsed === true ? 80 : 250">
-        <div class="navigation-header flex">
-        @if (collapsed) {
+<nav class="navigation" [style.width.px]="(collapsed$ | async) === true ? 80 : 250">
+    <div class="navigation-header flex">
+        @if ((collapsed$ | async) === true) {
         <svg-icon [size]="40" 
                     [iconName]="'coreui-signet-white'">
         </svg-icon>
@@ -12,52 +11,51 @@
                     [hSize]="50">
         </svg-icon>
         }
-        </div>
-        <ul class="navigation-body flex flex-col justify-start items-start gap-6 mt-4 mb-4">
-            @for (sLink of sideBarLinks; track $index) {
-                @if (sLink.haveHeading) {
-                    <p class="uppercase">{{sLink.headingTitle}}</p>
-                }
-                <li><a routerLink="">
-                    <span class="icon">
-                        <ion-icon name="{{sLink.iconName}}">
-                        </ion-icon>
-                    </span>
-                    <span class="title">
-                        {{sLink.urlTitle}}
-                    </span>
-                </a></li>
+    </div>
+    <ul class="navigation-body flex flex-col justify-start items-start gap-6 mt-4 mb-4">
+        @for (sLink of sideBarLinks; track $index) {
+            @if (sLink.haveHeading) {
+                <p class="uppercase">{{sLink.headingTitle}}</p>
+            }
+            <li><a routerLink="">
+                <span class="icon">
+                    <ion-icon name="{{sLink.iconName}}">
+                    </ion-icon>
+                </span>
+                <span class="title">
+                    {{sLink.urlTitle}}
+                </span>
+            </a></li>
 
-            }
-            <li><a routerLink="">
-                <span class="icon"><ion-icon name="layers-outline"></ion-icon></span>
-                <span class="title">Try Core UI PRO</span>
-            </a></li>
-            <li><a routerLink="">
-                <span class="icon"><ion-icon name="layers-outline"></ion-icon></span>
-                <span class="title">Try Core UI PRO</span>
-            </a></li>
-            <li><a routerLink="">
-                <span class="icon"><ion-icon name="layers-outline"></ion-icon></span>
-                <span class="title">Try Core UI PRO</span>
-            </a></li>
-            <li><a routerLink="">
-                <span class="icon"><ion-icon name="layers-outline"></ion-icon></span>
-                <span class="title">Try Core UI PRO</span>
-            </a></li>
-            <li><a routerLink="">
-                <span class="icon"><ion-icon name="layers-outline"></ion-icon></span>
-                <span class="title">Try Core UI PRO</span>
-            </a></li>
-        </ul>
-        <div class="navigation-footer clear-fix">
-            <span class="float-right" (click)="toggleCollapse()">
-            @if (collapsed) {
-            <ion-icon name="arrow-forward-outline"></ion-icon>
-            } @else {
-            <ion-icon name="arrow-back-outline"></ion-icon>
-            }
-            </span>
-        </div>
-    </nav>
-</div>
+        }
+        <li><a routerLink="">
+            <span class="icon"><ion-icon name="layers-outline"></ion-icon></span>
+            <span class="title">Try Core UI PRO</span>
+        </a></li>
+        <li><a routerLink="">
+            <span class="icon"><ion-icon name="layers-outline"></ion-icon></span>
+            <span class="title">Try Core UI PRO</span>
+        </a></li>
+        <li><a routerLink="">
+            <span class="icon"><ion-icon name="layers-outline"></ion-icon></span>
+            <span class="title">Try Core UI PRO</span>
+        </a></li>
+        <li><a routerLink="">
+            <span class="icon"><ion-icon name="layers-outline"></ion-icon></span>
+            <span class="title">Try Core UI PRO</span>
+        </a></li>
+        <li><a routerLink="">
+            <span class="icon"><ion-icon name="layers-outline"></ion-icon></span>
+            <span class="title">Try Core UI PRO</span>
+        </a></li>
+    </ul>
+    <div class="navigation-footer clear-fix">
+        <span class="float-right" (click)="toggleCollapse()">
+        @if ((collapsed$ | async) === true) {
+        <ion-icon name="arrow-forward-outline"></ion-icon>
+        } @else {
+        <ion-icon name="arrow-back-outline"></ion-icon>
+        }
+        </span>
+    </div>
+</nav>

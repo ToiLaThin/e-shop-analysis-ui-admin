@@ -1,0 +1,16 @@
+app-sidenav {
+    position: fixed;
+}
+
+//we do not use flex for parent of app-sidenav and .main content, since when mobile screen, app-sidenav is in upper layer of .main-content
+//in summary, main content is absolute and will be reposition on different screen size
+.main-content {
+    position: absolute;
+    width: calc(100% - 250px); //minus sidebar width
+    left: 300px;
+    transition: left .2s linear, width .2s linear;
+    &.collapsed {
+        width: calc(100% - 80px);
+        left: 80px;
+    }
+}

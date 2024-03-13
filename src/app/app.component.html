@@ -13,5 +13,14 @@
     </router-outlet>
   </div>
 </div> -->
-<app-sidenav></app-sidenav>
-<svg-definitions></svg-definitions>
+<div>
+  <app-sidenav>
+  </app-sidenav>
+  <div class="main-content" 
+       [class.collapsed]="sideBarCollapsed$ | async">
+    <app-header>
+    </app-header>
+  </div>
+</div>
+<svg-definitions>
+</svg-definitions>
