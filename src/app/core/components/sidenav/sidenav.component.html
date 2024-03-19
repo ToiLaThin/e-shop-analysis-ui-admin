@@ -2,7 +2,8 @@
     <div class="navigation-header flex">
         @if ((collapsed$ | async) === true) {
         <svg-icon [size]="40" 
-                    [iconName]="'coreui-signet-white'">
+                    [iconName]="'coreui-signet-white'"
+                    [currentColor]="'blue'">
         </svg-icon>
         } @else {
         <svg-icon [size]="180" 

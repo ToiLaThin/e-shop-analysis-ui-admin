@@ -20,10 +20,29 @@ h2.header-item {
     color: var(--cui-header-color);
 }
 .avatar-container {
+    @apply flex items-center; //to center img when height increase 
     width: 40px;
-    height: auto;
+    height: 80px; //so we can hover more to display dropdown //this is class of dropdown-container element too
     background-size: cover;
     & img {
         border-radius: 50%;
     }
+}
+
+.dropdown-container {
+    @apply relative;
+    .dropdown-content {
+        @apply hidden absolute top-[60px] right-0 min-w-[160px] z-10 rounded-rocker-sm bg-tailwick-background-light;
+        box-shadow: 0 0 10px 2px #dde;
+        font-size: smaller;
+    }
+    &:hover .dropdown-content { @apply block; }
+    .dropdown-content a {
+        @apply p-3 rounded-rocker-sm; //block will cause this cannot use flex
+        &:hover {
+            background-color: dodgerblue;
+            color: whitesmoke;
+        }
+    }
+
 }
