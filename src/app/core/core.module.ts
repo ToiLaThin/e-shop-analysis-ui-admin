@@ -8,6 +8,8 @@ import { ButtonComponent } from "./components/button/button.component";
 import { InputComponent } from "./components/input/input.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { PillComponent } from "./components/pill/pill.component";
+import { CouponComponent } from "./components/coupon/coupon.component";
+import { CouponPlaceholderComponent } from "./components/coupon-placeholder/coupon-placeholder.component";
 
 @NgModule({
     declarations: [
@@ -17,7 +19,9 @@ import { PillComponent } from "./components/pill/pill.component";
         SvgIcon,
         ButtonComponent,
         InputComponent,
-        PillComponent
+        PillComponent,
+        CouponComponent,
+        CouponPlaceholderComponent
     ],
     imports: [
         CommonModule, //to have asyn pipe in SideNavComponent
@@ -31,7 +35,9 @@ import { PillComponent } from "./components/pill/pill.component";
         SvgIcon,
         ButtonComponent,
         InputComponent,
-        PillComponent
+        PillComponent,
+        CouponComponent,
+        CouponPlaceholderComponent
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
     //for avoiding ion-icon is not a known element

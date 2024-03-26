@@ -1,0 +1,25 @@
+<div class="coupon" 
+     [ngClass]="[
+        size === 'sm' ? 'sm-size' : 
+        size === 'md' ? 'md-size' : 'lg-size',
+
+        discountType === DiscountType.PERCENT && discountValue > 30 ? 'ultra-discount' : 
+        discountType === DiscountType.VALUE && discountValue > 50000 ? 'ultra-discount' :
+        discountType === DiscountType.PERCENT && discountValue > 10 ? 'normal-discount' :
+        discountType === DiscountType.VALUE && discountValue > 10000 ? 'normal-discount' : ''
+        ]">
+    <div class="left">
+      <div>Enjoy Your Gift</div>
+    </div>
+    <div class="center">
+      <div>
+        <h2>{{discountValue}} {{ discountType === DiscountType.PERCENT ? '%' : '$' }} OFF</h2>
+        <small>Valid until May, 2023</small>
+      </div>
+    </div>
+    
+    <div class="right">
+      <div>87878521112</div>
+    </div>
+    
+  </div>

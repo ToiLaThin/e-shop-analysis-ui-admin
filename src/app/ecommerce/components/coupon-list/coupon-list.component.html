@@ -1,0 +1,47 @@
+<div class="flex flex-col">
+    <div class="flex flex-row mb-8">
+        <app-button className="btn-primary">
+            Hello    
+        </app-button>
+        <app-button className="btn-secondary">
+            Hola
+        </app-button>
+        <app-button className="btn-secondary">
+            Hiya
+        </app-button>
+    </div>
+    <div class="flex flex-col">
+        <!-- app-coupon here -->
+        <app-coupon [size]="'sm'" 
+                    [discountType]="DiscountType.PERCENT" 
+                    [discountValue]="5"
+                    class="mt-4">
+        </app-coupon>
+        <app-coupon [size]="'md'" 
+                    [discountType]="DiscountType.PERCENT" 
+                    [discountValue]="20"
+                    class="mt-4">
+        </app-coupon>
+        <app-coupon [size]="'sm'" 
+                    [discountType]="DiscountType.PERCENT" 
+                    [discountValue]="35"
+                    class="mt-4">
+        </app-coupon>
+        <app-coupon [size]="'sm'" 
+                    [discountType]="DiscountType.VALUE" 
+                    [discountValue]="1000"
+                    class="mt-4">
+        </app-coupon>
+        <app-coupon [size]="'lg'" 
+                    [discountType]="DiscountType.VALUE" 
+                    [discountValue]="20000"
+                    class="mt-4">
+        </app-coupon>
+        <app-coupon-placeholder class="mt-4">
+        </app-coupon-placeholder>
+        <app-coupon-placeholder class="mt-4">
+        </app-coupon-placeholder>
+        <app-coupon-placeholder class="mt-4">
+        </app-coupon-placeholder>
+    </div>
+</div>

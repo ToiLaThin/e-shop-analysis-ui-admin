@@ -8,6 +8,7 @@ import { ProviderListComponent } from "./components/provider-list/provider-list.
 import { ProviderListPaginationComponent } from "./components/provider-list/provider-list-pagination.component";
 import { ProviderListHeaderComponent } from "./components/provider-list/provider-list-header.component";
 import { CommonModule } from "@angular/common";
+import { CouponListComponent } from "./components/coupon-list/coupon-list.component";
 
 @NgModule({
     declarations: [
@@ -15,7 +16,8 @@ import { CommonModule } from "@angular/common";
         AddCatalogComponent,
         ProviderListHeaderComponent,
         ProviderListPaginationComponent,
-        ProviderListComponent
+        ProviderListComponent,
+        CouponListComponent,        
     ],
     imports: [
         RouterModule.forChild(ecomRoutes),
