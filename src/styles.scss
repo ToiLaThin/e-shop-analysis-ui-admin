@@ -4,6 +4,7 @@
 @tailwind utilities;
 
 @import './app/core/styles/reset';
+@import './app/core/styles/form';
 
 body {
     @apply font-tailwick;

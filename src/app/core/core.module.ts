@@ -4,13 +4,15 @@ import { SideNavComponent } from "./components/sidenav/sidenav.component";
 import { SvgDefinitionsComponent } from "./components/svg-definitions/svg-definitions.component";
 import { SvgIcon } from "./components/svg-icon/svg-icon.component";
 import { CommonModule } from "@angular/common";
+import { ButtonComponent } from "./components/button/button.component";
 
 @NgModule({
     declarations: [
         HeaderComponent,
         SideNavComponent,
         SvgDefinitionsComponent,
-        SvgIcon
+        SvgIcon,
+        ButtonComponent
     ],
     imports: [
         CommonModule //to have asyn pipe in SideNavComponent
@@ -19,7 +21,8 @@ import { CommonModule } from "@angular/common";
         HeaderComponent,
         SideNavComponent,
         SvgDefinitionsComponent,
-        SvgIcon
+        SvgIcon,
+        ButtonComponent
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
     //for avoiding ion-icon is not a known element
