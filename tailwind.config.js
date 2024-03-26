@@ -50,7 +50,8 @@ module.exports = {
     },
     fontFamily: {
       'rocker': ['Roboto', 'sans-serif'],
-      'tailwick': ['Public Sans', 'sans-serif']
+      'tailwick': ['Public Sans', 'sans-serif'],
+      'fontTable': ['Montserrat', 'sans-serif']
     },
     fontSize: {
       xs: '0.75rem',
