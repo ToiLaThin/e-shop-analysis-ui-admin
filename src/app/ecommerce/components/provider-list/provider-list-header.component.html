@@ -1,0 +1,20 @@
+<div class="flex flex-row px-6 py-4">
+    <div class="flex flex-row items-center">
+        <div class="mr-7">
+            <span class="mr-2">Show</span>
+            <select name="product-per-page" class="select-product-per-page mr-2">
+                <option selected value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+            </select>
+            entries
+        </div>
+        <app-input [iconName]="'search-outline'"
+                   [placeholder]="'Search...'">
+        </app-input>
+    </div>
+    <div class="flex-auto"></div>
+    <app-button [iconName]="'add-outline'">
+        Add New Customer
+    </app-button>
+</div>

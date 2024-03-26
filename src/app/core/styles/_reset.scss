@@ -4,7 +4,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    // font-family: sans-serif; this will make th cannot inherit from .table parent class
+    // set this in body instead (_reset.scss)
 }
 
 :root {

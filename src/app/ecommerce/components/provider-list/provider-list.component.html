@@ -1,0 +1,59 @@
+<app-provider-list-header>
+</app-provider-list-header>
+<div class="table-container">
+    <table class="table">
+        <tr class="head-row">
+            <th>ID</th>
+            <th>Product</th>
+            <th>Customer</th>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>Payment Mode</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+        @for (row of mockDatas; track row) {
+        <tr class="data-row">
+            <td>{{row.id}}</td>
+            <td class="flex flex-row">
+                <div class="overflow-hidden mr-3 object-cover" style="width: 30px; height: 30px;">
+                    <img src="{{row.productImg}}" class="w-full h-auto object-cover">
+                </div>
+                {{row.product}}
+            </td>
+            <td>{{row.customer}}</td>
+            <td>{{ row.date | date: 'dd/MM/yyyy' }}</td>
+            <td>${{row.amount}}</td>
+            <td>{{row.paymentMode}}</td>
+            <td>
+                @if (row.orderStatus === OrderStatus.DELIVERED) {
+                <app-pill [className]="PillType.SUCCESS"
+                            [content]="row.orderStatus">
+                </app-pill>
+                } @else if (row.orderStatus === OrderStatus.CANCELED) {
+                <app-pill [className]="PillType.DANGER"
+                            [content]="row.orderStatus">
+                </app-pill>
+                } @else if (row.orderStatus === OrderStatus.PROCESSING) {
+                <app-pill [className]="PillType.WARNING"
+                            [content]="row.orderStatus">
+                </app-pill>
+                }
+            </td>
+            <td class="flex flex-row">
+                <svg-icon [iconName]="'trash-outline'" 
+                          [currentColor]="'purple'"
+                          [size]="24"
+                          class="mr-3">
+                </svg-icon>
+                <svg-icon [iconName]="'edit-outline'" 
+                          [currentColor]="'tomato'"
+                          [size]="24">
+                </svg-icon>
+            </td>
+        </tr>
+        }
+    </table>
+</div>
+<app-provider-list-pagination>
+</app-provider-list-pagination>
