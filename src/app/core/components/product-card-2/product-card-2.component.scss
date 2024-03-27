@@ -1,0 +1,12 @@
+.product-card-container {
+    @apply bg-[#ddd] w-[160px] rounded-sm;
+    box-shadow: 0 0 4px #ddd;
+
+    img {
+        height: 120px;
+        object-fit: cover;
+        mix-blend-mode: multiply;
+        filter: contrast(1.3);
+    }
+}
+

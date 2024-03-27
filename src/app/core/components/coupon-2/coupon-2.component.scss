@@ -1,0 +1,37 @@
+.coupon-container {
+    border-radius: 20px;
+    overflow: hidden; //header if not have border-radius is still rounded
+    box-shadow: 0 0 10px #ddd;
+    width: 300px; //will span full width without this
+    height: auto;
+
+    cursor: pointer;
+    transition: transform .2s linear;
+
+    &:hover {
+        transform: rotateZ(-10deg) scale(1.2);
+    }
+}
+
+@mixin clear-fix {
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+.coupon-header {
+    background-color: #124076;
+    padding: 8px 12px;
+    .img-container {
+        width: 30px;
+        border-radius: 50%;
+        overflow: hidden;
+        
+        img {
+            //img already have width: 100% height: auto            
+            border: 1px solid #ddd;
+            object-fit: cover;
+        }
+    }
+}
