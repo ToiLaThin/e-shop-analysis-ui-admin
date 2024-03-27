@@ -1,0 +1,36 @@
+.product-chip {
+    @apply inline-block;
+    font-family: 'Oswald', sans-serif;
+    
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.img-container {
+    width: 50px;
+    float: left;
+    
+    img {
+        border: 1px solid #ddd;
+        object-fit: cover;
+    }
+}
+
+.product-chip-content {
+    margin-left: 40px;
+    box-shadow: 0 0 10px #ddd;
+    padding: 14px;
+    @apply relative -z-10 rounded-rocker-sm bg-[#fff] shadow-tailwick-black-text;
+    transition: all .2s linear;
+    cursor: pointer;
+    &:hover {
+        @apply bg-[#ddd];
+    }
+}
+
+.ribbon {
+    @apply absolute -top-2 -right-2 bg-[red] rounded-rocker-sm px-1 py-1 text-tailwick-primary-light -rotate-12;
+}

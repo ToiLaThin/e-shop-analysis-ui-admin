@@ -4,12 +4,13 @@ import { AddCatalogComponent } from "./components/add-catalog/add-catalog.compon
 import { AddSubCatalogComponent } from "./components/add-subcatalog/add-subcatalog.component";
 import { ProviderListComponent } from "./components/provider-list/provider-list.component";
 import { CouponListComponent } from "./components/coupon-list/coupon-list.component";
+import { SaleListComponent } from "./components/sale-list/sale-list.component";
 
 export const ecomRoutes: Routes = [
     {
         path: '',
         // component: OrdersComponent,
-        component: CouponListComponent,
+        component: SaleListComponent,
     },
     {
         path: 'add-catalog',
@@ -26,5 +27,9 @@ export const ecomRoutes: Routes = [
     {
         path: 'coupon-list',
         component: CouponListComponent
+    },
+    {
+        path: 'sale-list',
+        component: SaleListComponent
     }
 ]
