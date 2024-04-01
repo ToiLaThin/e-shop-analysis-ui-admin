@@ -9,8 +9,9 @@ import { SaleListComponent } from "./components/sale-list/sale-list.component";
 export const ecomRoutes: Routes = [
     {
         path: '',
-        // component: OrdersComponent,
+        //component: OrdersComponent,
         component: SaleListComponent,
+        //component: CouponListComponent,
     },
     {
         path: 'add-catalog',

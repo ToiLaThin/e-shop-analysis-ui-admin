@@ -10,4 +10,10 @@ export class CouponListComponent {
     get DiscountType() {
         return DiscountType;
     }
+
+    siderToggled: boolean = false;
+    toggleSider() {
+        this.siderToggled = !this.siderToggled;
+        console.log(this.siderToggled);
+    }
 }

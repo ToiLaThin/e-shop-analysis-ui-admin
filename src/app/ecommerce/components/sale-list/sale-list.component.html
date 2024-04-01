@@ -1,4 +1,4 @@
-<app-product-chip>
+<!-- <app-product-chip>
 </app-product-chip>
 <br>
 <br>
@@ -19,4 +19,102 @@
 <br>
 <br>
 <app-product-card-2>
-</app-product-card-2>
+</app-product-card-2> -->
+<div class="flex flex-row">
+    <svg-icon [currentColor]="'#121212'"
+              [iconName]="'add-outline'"
+              [size]="24"
+              (click)="openRightPart()">
+    </svg-icon>
+    <div class="left flex-grow">
+        @if(!this.currentViewModeTable) {
+
+            <app-product-chip-3>
+            </app-product-chip-3> 
+            <app-product-chip-3>
+            </app-product-chip-3> 
+            <app-product-chip-3>
+            </app-product-chip-3> 
+            <app-product-chip-3>
+            </app-product-chip-3> 
+            <app-product-chip-3>
+            </app-product-chip-3> 
+            <app-product-chip-3>
+            </app-product-chip-3> 
+            <app-product-chip-3>
+            </app-product-chip-3> 
+            <app-product-chip-3>
+            </app-product-chip-3> 
+            <app-product-chip-3>
+            </app-product-chip-3> 
+            <app-product-chip-3>
+            </app-product-chip-3> 
+            <app-product-chip-3>
+            </app-product-chip-3> 
+            <app-product-chip-3>
+            </app-product-chip-3> 
+            <app-product-chip-3>
+            </app-product-chip-3> 
+            <app-product-chip-3>
+            </app-product-chip-3> 
+            <app-product-chip-3>
+            </app-product-chip-3> 
+            <app-product-chip-3>
+            </app-product-chip-3> 
+            <app-product-chip-3>
+            </app-product-chip-3> 
+            <app-product-chip-3>
+            </app-product-chip-3> 
+            <app-product-chip-3>
+            </app-product-chip-3> 
+            <app-product-chip-3>
+            </app-product-chip-3> 
+            <app-product-chip-3>
+            </app-product-chip-3> 
+            <app-product-chip-3>
+            </app-product-chip-3> 
+        }
+        @else {
+            <app-provider-list>
+            </app-provider-list>
+        }
+    </div>
+    <div class="right flex flex-col" 
+         #rightCol>
+        <div class="right-header my-4 flex flex-row gap-8 justify-between">
+            <div class="flex flex-row">
+                <svg-icon [currentColor]="'#fff'"
+                          [iconName]="'times'"
+                          [size]="24"
+                          (click)="closeRightPart()"
+                          class="mr-4">
+                </svg-icon>
+                @if (this.currentViewModeTable) {
+                <svg-icon [currentColor]="'#fff'"
+                            [iconName]="'list-view-mode'"
+                            [size]="24"
+                            (click)="toggleViewMode()">
+                </svg-icon>
+                } @else if (this.currentViewModeTable === false) {
+                <svg-icon [currentColor]="'#fff'"
+                            [iconName]="'table-view-mode'"
+                            [size]="24"
+                            (click)="toggleViewMode()">
+                </svg-icon>
+                }
+            </div>
+            <div class="actions">
+                <app-button>
+                    <svg-icon [currentColor]="'#fff'"
+                          [iconName]="'add-outline'"
+                          [size]="24"
+                          (click)="addNewSaleModal()">
+                    </svg-icon>
+                </app-button>
+            </div>
+        </div>
+        <app-coupon-2>
+        </app-coupon-2>
+        
+    </div>
+</div>

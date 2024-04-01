@@ -1,7 +1,30 @@
-<div class="coupon">
+<div class="coupon" [ngClass]="[
+    type === 'delete' ? 'type-delete' : 
+    type === 'add' ? 'type-add' : 
+    'type-edit']">
     <div class="left">
+        @if (type === 'delete') {
+            <ion-icon name="trash-outline" class="text-3xl">
+            </ion-icon>
+        } 
+        @if (type === 'edit') {
+            <ion-icon name="pencil-outline" class="text-3xl">
+            </ion-icon>
+        } 
+        @if (type === 'add') {
+            <ion-icon name="add-circle-outline" class="text-3xl">
+            </ion-icon>
+        } 
     </div>
     <div class="right">
-        Add New Coupon
+        @if (type === 'delete') {
+            Drag To Delete
+        } 
+        @if (type === 'edit') {
+            Drag To Edit 
+        } 
+        @if (type === 'add') {
+            Clic To Add New Coupon
+        } 
     </div>
   </div>

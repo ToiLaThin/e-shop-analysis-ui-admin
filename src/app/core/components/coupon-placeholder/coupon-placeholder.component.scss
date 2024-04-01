@@ -1,6 +1,6 @@
 :host {
-    --bgCoupon: gold;
-    --textCouponHeading: #121212;
+    --bgCoupon: #FFA447;
+    --textCouponHeading: #FFA447;
 }
 
 .coupon {
@@ -17,6 +17,16 @@
     &:hover .right {
         opacity: 1;
     }
+
+    &.type-delete {
+        --bgCoupon: #FF004D;
+        --textCouponHeading: #FF004D;
+    }
+
+    &.type-add {
+        --bgCoupon: #9ADE7B;
+        --textCouponHeading: #9ADE7B;
+    }
 }
 
 .coupon > div { 
@@ -26,6 +36,7 @@
 .left {
     width: 25%;
     border-right: 2px dashed var(--bgCoupon);
+    color: var(--textCouponHeading);
 }
 
 
