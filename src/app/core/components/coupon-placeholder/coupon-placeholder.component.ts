@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 
 @Component({
     selector: 'app-coupon-placeholder',
@@ -6,5 +6,6 @@ import { Component } from "@angular/core";
     styleUrls: ['./coupon-placeholder.component.scss']
 })
 export class CouponPlaceholderComponent {
+    @Input() type!: 'add' | 'edit' | 'delete';
     constructor() {}
 }

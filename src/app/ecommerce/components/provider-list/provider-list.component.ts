@@ -114,6 +114,6 @@ export class ProviderListComponent implements OnInit {
 
     ]
     ngOnInit(): void {
-        throw new Error("Method not implemented.");
+        console.log("table list component init")
     }
 }
