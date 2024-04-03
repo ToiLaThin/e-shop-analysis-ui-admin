@@ -5,12 +5,14 @@ import { AddSubCatalogComponent } from "./components/add-subcatalog/add-subcatal
 import { ProviderListComponent } from "./components/provider-list/provider-list.component";
 import { CouponListComponent } from "./components/coupon-list/coupon-list.component";
 import { SaleListComponent } from "./components/sale-list/sale-list.component";
+import { ProviderList2Component } from "./components/provider-list-2/provider-list-2.component";
+import { ProviderList3Component } from "./components/provider-list-3/provider-list-3.component";
 
 export const ecomRoutes: Routes = [
     {
         path: '',
         //component: OrdersComponent,
-        component: SaleListComponent,
+        component: ProviderList3Component,
         //component: CouponListComponent,
     },
     {
@@ -32,5 +34,13 @@ export const ecomRoutes: Routes = [
     {
         path: 'sale-list',
         component: SaleListComponent
+    },
+    {
+        path: 'provider-list-2',
+        component: ProviderList2Component
+    },
+    {
+        path: 'provider-list-3',
+        component: ProviderList3Component
     }
 ]
