@@ -1,4 +1,4 @@
-import { NgModule } from "@angular/core";
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from "@angular/core";
 import { ecomRoutes } from "./ecommerce.routes";
 import { RouterModule } from "@angular/router";
 import { AddSubCatalogComponent } from "./components/add-subcatalog/add-subcatalog.component";
@@ -21,6 +21,8 @@ import { CouponListAdvanceFilterComponent } from "./components/coupon-list/coupo
 import { NzModalModule, NzModalRef } from 'ng-zorro-antd/modal'
 import { NzSliderModule } from 'ng-zorro-antd/slider';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { ProviderList2Component } from "./components/provider-list-2/provider-list-2.component";
+import { ProviderList3Component } from "./components/provider-list-3/provider-list-3.component";
 
 @NgModule({
     declarations: [
@@ -29,6 +31,8 @@ import { NzLayoutModule } from 'ng-zorro-antd/layout';
         ProviderListHeaderComponent,
         ProviderListPaginationComponent,
         ProviderListComponent,
+        ProviderList2Component,
+        ProviderList3Component,
         CouponListComponent,
         CouponListFilterComponent,
         SaleListComponent,
@@ -49,7 +53,8 @@ import { NzLayoutModule } from 'ng-zorro-antd/layout';
         NzLayoutModule
         
     ],
-    exports: [],    
+    exports: [],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA], 
 })
 export class EcommerceModule {
 

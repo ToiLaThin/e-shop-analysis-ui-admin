@@ -1,0 +1,134 @@
+
+<div class="bg-[#F0F3FF] px-6 py-8">
+    <h1 style="margin: 24px 0;" class="font-bold text-2xl">Adjustment List</h1>
+    <!-- Header here -->
+    <div class="flex flex-col gap-4 justify-start lg:flex-row md:justify-between">
+        <div class="flex flex-col gap-4 lg:flex-row">
+            <div class="flex-row-center justify-start outline-btn-purple" style="max-width: fit-content;">
+                <span>Filter</span>
+                <span class="ml-2">
+                    <img src="../../../../assets/images/adjust-svgrepo-com.svg" width="20" height="auto">
+                </span>
+            </div>
+            <div class="search-container input-here flex-row-center">
+                <input type="text" 
+                       placeholder="Search product"
+                       class="search-container-input">
+                <div class="search-btn ml-2">
+                    <img src="../../../../assets/images/search-outline.svg" 
+                            alt="search" 
+                            class="w-[20px] h-[20px]">
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-row gap-2">
+            <div class="flex-row-center justify-start outline-btn-green">
+                <span>Excel</span>                
+            </div>
+            <div class="flex-row-center justify-start outline-btn-red">
+                <span>Pdf</span>                
+            </div>
+            <div class="flex-row-center justify-start fill-btn-green">
+                <span>Import</span>
+                <span class="ml-2">
+                    <img src="../../../../assets/images/download-minimalistic-svgrepo-com.svg" width="20" height="auto">
+                </span>
+            </div>
+            <div class="flex-row-center justify-start fill-btn-red">
+                <span>Create Adjustment</span>
+                <span class="ml-2">
+                    <img src="../../../../assets/images/add-outline.svg" width="20" height="auto">
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Selected products -->
+    <div class="table-container">
+        <table>
+            <tr class="font-semibold">
+                <th>
+                    <div class="flex flex-row items-center">
+                        <input type="checkbox" class="mr-2">
+                        <span class="mr-2">Date</span>
+                        <img src="../../../../assets/images/sort-vertical-svgrepo-com.svg" width="40" height="40">
+                    </div>
+                </th>
+                <th>
+                    <span class="relative">
+                    Reference
+                    <span class="sort-icon asc" (click)="notify()"></span>
+                    </span>
+                </th>
+                <th>
+                    <span class="relative">
+                    Warehouse
+                    <span class="sort-icon asc" (click)="notify()"></span>
+                    </span>
+                </th>
+                <th style="text-align: center;">
+                    <span class="relative">
+                    Total Products
+                    <span class="sort-icon asc" (click)="notify()"></span>
+                    </span>
+                </th>
+                <th>Action</th>
+            </tr>
+            <ng-container *ngFor="let i of [1, 2, 3, 4, 5]">
+
+            <tr class="text-[#ddd]">
+                <td>
+                    <input type="checkbox" class="mr-2">
+                    <span class="mr-1">26/12/2023</span>
+                </td>
+                <td class="left-align">87305928</td>
+                <td>$ 200.00</td>
+                <td style="text-align: center;">
+                    <div class="qty-container">
+                        <span class="incr-btn"
+                                (click)="decreaseQty()">
+                            &lsaquo;
+                        </span>
+                        <input type="number" 
+                                value="1" 
+                                id="qtyInput"
+                                min="0">
+                        <span class="desc-btn"
+                                (click)="increaseQty()">
+                            &rsaquo;
+                        </span>
+                    </div>
+                </td>
+                <td class="text-3xl">
+                    <div class="flex flex-row items-center gap-2">
+                        <span class="text-[red]">&times;</span>
+                        <span class="text-[green]">&times;</span>
+                        <span class="text-[purple]">&times;</span>
+                    </div>
+                </td>
+            </tr>
+            </ng-container>
+        </table>
+    </div>
+
+    <!-- Pagination -->
+    <div class="mt-5 flex flex-row justify-between">
+        <div>
+            <span class="mr-2">Showing 1 to 10 of 57 entries</span>
+            <select name="" id="">
+                <option value="">10</option>
+                <option value="">20</option>
+                <option value="">30</option>
+                <option value="">40</option>
+                <option value="">50</option>
+            </select>
+        </div>
+        <div class="pagination-container">
+            <span class="prev-btn">&laquo;</span>
+            <ng-container *ngFor="let pageNum of [1, 2, 3]">
+                <span class="page-btn">{{ pageNum }}</span>
+            </ng-container>
+            <span class="next-btn">&raquo;</span>
+        </div>
+    </div>
+</div>
