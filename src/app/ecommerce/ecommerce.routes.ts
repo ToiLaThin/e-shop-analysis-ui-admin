@@ -7,13 +7,15 @@ import { CouponListComponent } from "./components/coupon-list/coupon-list.compon
 import { SaleListComponent } from "./components/sale-list/sale-list.component";
 import { ProviderList2Component } from "./components/provider-list-2/provider-list-2.component";
 import { ProviderList3Component } from "./components/provider-list-3/provider-list-3.component";
+import { OrderProcessListComponent } from "./components/order-process/order-process-list/order-process-list.component";
+import { OrderTrackingStepperComponent } from "./components/order-process/order-tracking-stepper/order-tracking-stepper.component";
+import { OrderTrackingPaymentMethodsComponent } from "./components/order-process/order-tracking-tabs/order-tracking-payment-methods/order-tracking-payment-methods.component";
+import { OrderTrackingCustomerInfoComponent } from "./components/order-process/order-tracking-tabs/order-tracking-customer-info/order-tracking-customer-info.component";
 
 export const ecomRoutes: Routes = [
     {
         path: '',
-        //component: OrdersComponent,
-        component: ProviderList3Component,
-        //component: CouponListComponent,
+        component: OrderProcessListComponent,
     },
     {
         path: 'add-catalog',
@@ -42,5 +44,13 @@ export const ecomRoutes: Routes = [
     {
         path: 'provider-list-3',
         component: ProviderList3Component
+    },
+    {
+        path: 'order-process-list',
+        component: OrderProcessListComponent
+    },
+    {
+        path: 'order-tracking-stepper',
+        component: OrderTrackingStepperComponent
     }
 ]

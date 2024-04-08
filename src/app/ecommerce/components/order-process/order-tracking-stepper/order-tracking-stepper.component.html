@@ -1,0 +1,22 @@
+<div class="progressBar">
+    @for (i of [1, 2, 3, 4, 5]; track $index) {
+    <div class="container" (click)="addActiveClass($event)" #container>
+        <div class="circle">
+            @if (i % 2 === 0) {
+            <div class="content down">
+                <div class="text-center text-xs">
+                    Step {{$index + 1}}
+                </div>
+            </div>
+            } @else {
+            <div class="content up">
+                <div class="text-center text-xs">
+                    Step {{$index + 1}}
+                </div>
+            </div>
+            }
+        </div>
+        <div class="line"></div>
+    </div>
+    }
+</div>

@@ -23,6 +23,12 @@ import { NzSliderModule } from 'ng-zorro-antd/slider';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { ProviderList2Component } from "./components/provider-list-2/provider-list-2.component";
 import { ProviderList3Component } from "./components/provider-list-3/provider-list-3.component";
+import { OrderProcessListComponent } from "./components/order-process/order-process-list/order-process-list.component";
+import { NzToolTipModule } from "ng-zorro-antd/tooltip";
+import { OrderTrackingNotifyCustomerComponent } from "./components/order-process/order-tracking-tabs/order-tracking-notify-customer/order-tracking-notify-customer.component";
+import { OrderTrackingCustomerInfoComponent } from "./components/order-process/order-tracking-tabs/order-tracking-customer-info/order-tracking-customer-info.component";
+import { OrderTrackingPaymentMethodsComponent } from "./components/order-process/order-tracking-tabs/order-tracking-payment-methods/order-tracking-payment-methods.component";
+import { BrowserModule } from "@angular/platform-browser";
 
 @NgModule({
     declarations: [
@@ -37,6 +43,11 @@ import { ProviderList3Component } from "./components/provider-list-3/provider-li
         CouponListFilterComponent,
         SaleListComponent,
         CouponListAdvanceFilterComponent,
+        OrderProcessListComponent,
+
+        OrderTrackingNotifyCustomerComponent,
+        OrderTrackingCustomerInfoComponent,
+        OrderTrackingPaymentMethodsComponent
     ],
     imports: [
         RouterModule.forChild(ecomRoutes),
@@ -50,7 +61,8 @@ import { ProviderList3Component } from "./components/provider-list-3/provider-li
         NzCheckboxModule,
         NzModalModule,
         NzSliderModule,
-        NzLayoutModule
+        NzLayoutModule,
+        NzToolTipModule
         
     ],
     exports: [],
