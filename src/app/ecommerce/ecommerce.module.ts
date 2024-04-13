@@ -29,6 +29,8 @@ import { OrderTrackingNotifyCustomerComponent } from "./components/order-process
 import { OrderTrackingCustomerInfoComponent } from "./components/order-process/order-tracking-tabs/order-tracking-customer-info/order-tracking-customer-info.component";
 import { OrderTrackingPaymentMethodsComponent } from "./components/order-process/order-tracking-tabs/order-tracking-payment-methods/order-tracking-payment-methods.component";
 import { BrowserModule } from "@angular/platform-browser";
+import { CommentFormComponent } from "./components/comment-form/comment-form.component";
+import { CommentListComponent } from "./components/comment-list/comment-list.component";
 
 @NgModule({
     declarations: [
@@ -47,7 +49,10 @@ import { BrowserModule } from "@angular/platform-browser";
 
         OrderTrackingNotifyCustomerComponent,
         OrderTrackingCustomerInfoComponent,
-        OrderTrackingPaymentMethodsComponent
+        OrderTrackingPaymentMethodsComponent,
+
+        CommentFormComponent,
+        CommentListComponent
     ],
     imports: [
         RouterModule.forChild(ecomRoutes),

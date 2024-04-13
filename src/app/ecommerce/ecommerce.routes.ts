@@ -11,11 +11,13 @@ import { OrderProcessListComponent } from "./components/order-process/order-proc
 import { OrderTrackingStepperComponent } from "./components/order-process/order-tracking-stepper/order-tracking-stepper.component";
 import { OrderTrackingPaymentMethodsComponent } from "./components/order-process/order-tracking-tabs/order-tracking-payment-methods/order-tracking-payment-methods.component";
 import { OrderTrackingCustomerInfoComponent } from "./components/order-process/order-tracking-tabs/order-tracking-customer-info/order-tracking-customer-info.component";
+import { CommentListComponent } from "./components/comment-list/comment-list.component";
+import { CommentFormComponent } from "./components/comment-form/comment-form.component";
 
 export const ecomRoutes: Routes = [
     {
         path: '',
-        component: OrderProcessListComponent,
+        component: CommentFormComponent,
     },
     {
         path: 'add-catalog',
@@ -52,5 +54,12 @@ export const ecomRoutes: Routes = [
     {
         path: 'order-tracking-stepper',
         component: OrderTrackingStepperComponent
+    }, 
+    {
+        path: 'comment-list',
+        component: CommentListComponent
+    }, {
+        path: 'comment-form',
+        component: CommentFormComponent
     }
 ]
