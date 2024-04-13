@@ -23,11 +23,16 @@
 }
 
 .tab {
-    @apply px-4 py-2 bg-[#fff] rounded-[6px] shadow-rocker-sm w-[200px];
+    @apply px-4 py-2 bg-[#fff] w-[200px];
     transition: all 0.3s ease-in-out;
     cursor: pointer;
     &:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+        transform: translateY(-1px);
+        background-color: #C24443;
+        color: #fff;
+    }
+
+    &.active {
+        transform: translateX(5px);
     }
 }

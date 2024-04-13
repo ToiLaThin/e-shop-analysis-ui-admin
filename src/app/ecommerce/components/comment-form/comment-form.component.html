@@ -1,0 +1,16 @@
+<div class="w-4/5 mx-auto shadow-rocker-sm ">
+    <div class="flex flex-row px-4 py-2 rounded-sm">
+        <div class="icon-container overflow-hidden">
+            <img src="../../../../assets/images/avatar.jpg" style="width: 32px; height: 32px;">
+        </div>
+        <div class="flex flex-col flex-1">
+            <textarea type="text" placeholder="Enter your comment" (keypress)="autoGrow($event)">
+            </textarea>
+            <div class="flex flex-row items-center mt-3">
+                <div class="flex-auto"></div>
+                <app-button className="btn-secondary ml-2">cancel</app-button>
+                <app-button className="btn-primary">submit</app-button>
+            </div>
+        </div>
+    </div>
+</div>
