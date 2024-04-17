@@ -31,7 +31,9 @@ import { OrderTrackingPaymentMethodsComponent } from "./components/order-process
 import { BrowserModule } from "@angular/platform-browser";
 import { CommentFormComponent } from "./components/comment-form/comment-form.component";
 import { CommentListComponent } from "./components/comment-list/comment-list.component";
-
+import { OrderDetailPopComponent } from "./components/order-detail-pop/order-detail-pop.component";
+import { OrderDetailSideComponent } from "./components/order-detail-side/order-detail-side.component";
+import { NzDrawerModule } from "ng-zorro-antd/drawer";
 @NgModule({
     declarations: [
         AddSubCatalogComponent,
@@ -52,7 +54,9 @@ import { CommentListComponent } from "./components/comment-list/comment-list.com
         OrderTrackingPaymentMethodsComponent,
 
         CommentFormComponent,
-        CommentListComponent
+        CommentListComponent,
+        OrderDetailPopComponent,
+        OrderDetailSideComponent,
     ],
     imports: [
         RouterModule.forChild(ecomRoutes),
@@ -67,7 +71,9 @@ import { CommentListComponent } from "./components/comment-list/comment-list.com
         NzModalModule,
         NzSliderModule,
         NzLayoutModule,
-        NzToolTipModule
+        NzToolTipModule,
+        NzDrawerModule,
+        
         
     ],
     exports: [],
